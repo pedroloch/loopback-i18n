@@ -79,7 +79,7 @@ Now you can inject a function that will translate the messages based on the brow
 ```ts
 import { inject } from '@loopback/core';
 import { get, param } from '@loopback/rest';
-import { I18NBindings, I18nApi } from '@pedro/loopback-i18n';
+import { I18NBindings, I18nApi } from '@pedroloch/loopback-i18n';
 
 export class MyController {
   constructor(
