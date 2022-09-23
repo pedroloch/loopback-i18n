@@ -61,7 +61,7 @@ en.json
 ```json
 {
     "greeting": "Hello",
-    "greeting_with_placeholder": "Hello, %s"
+    "greeting_with_name": "Hello, %s"
 }
 ```
 pt.json
@@ -69,7 +69,7 @@ pt.json
 ```json
 {
     "greeting": "Olá",
-    "greeting_with_placeholder": "Olá, %s"
+    "greeting_with_name": "Olá, %s"
 
 }
 ```
