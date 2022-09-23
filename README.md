@@ -5,7 +5,7 @@ This module contains a component to add i18n to Loopback 4. It's made on top of 
 ## Instalation
 
 ```sh
-npm install pedroloch/loopback-i18n
+npm install @pedroloch/loopback-i18n
 ```
 
 ## Binding into the application
@@ -21,7 +21,7 @@ import {RestApplication, RestBindings} from '@loopback/rest';
 import {readFileSync} from 'fs';
 import path from 'path';
 import yaml from 'yaml';
-import {I18NBindings, I18nComponent, I18nOptions} from 'pedroloch/loopback-i18n';
+import {I18NBindings, I18nComponent, I18nOptions} from '@pedroloch/loopback-i18n';
 export {ApplicationConfig};
 
 export class BackendApplication extends BootMixin(ServiceMixin(RepositoryMixin(RestApplication))) {
@@ -49,7 +49,7 @@ export class BackendApplication extends BootMixin(ServiceMixin(RepositoryMixin(R
 For the configuration, you just need to pass the same configuration you would use in the library [i18n](https://www.npmjs.com/package/i18n). Check their specifications for details. You can use the type **I18nOptions** from this library to help you with typescript autocomplete.
 
 ```ts
-import {I18nOptions} from 'pedroloch/loopback-i18n';
+import {I18nOptions} from '@pedroloch/loopback-i18n';
 ```
 
 
