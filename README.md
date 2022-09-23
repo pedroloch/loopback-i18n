@@ -108,7 +108,7 @@ curl -X 'GET' \
 -H 'Accept-Language: en'
 
 # Should return
-{message:'Hello'}
+{msg:'Hello'}
 ```
 
 ```sh
@@ -118,7 +118,7 @@ curl -X 'GET' \
 -H 'Accept-Language: pt'
 
 # Should return
-{message:'Olá'}
+{msg:'Olá'}
 ```
 
 ```sh
@@ -128,7 +128,7 @@ curl -X 'GET' \
 -H 'Accept-Language: en'
 
 # Should return
-{message:'Hello, John'}
+{msg:'Hello, John'}
 ```
 
 ```sh
@@ -138,7 +138,7 @@ curl -X 'GET' \
 -H 'Accept-Language: pt'
 
 # Should return
-{message:'Olá, John'}
+{msg:'Olá, John'}
 ```
 
 If Accept-Language header is not present, it should return the defaultLocale.
@@ -149,5 +149,5 @@ curl -X 'GET' \
 -H 'accept: application/json' |
 
 # Should return
-{message:'Hello, John'}
+{msg:'Hello, John'}
 ```
