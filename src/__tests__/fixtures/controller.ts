@@ -15,6 +15,10 @@ export class TestController {
 
   @get('/greeting/{name}')
   greetingWithName(@param.path.string('name') name: string) {
-    return { msg: this.t('greeting_with_name', name) };
+    return {
+      msg: this.t('greeting_with_name', {
+        name,
+      }),
+    };
   }
 }

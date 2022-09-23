@@ -27,11 +27,11 @@ describe('i18n component', () => {
       staticCatalog: {
         en: {
           greeting: 'Hello from Loopback',
-          greeting_with_name: 'Hello from Loopback, %s',
+          greeting_with_name: 'Hello from Loopback, {{name}}',
         },
         pt: {
           greeting: 'Olá do Loopback',
-          greeting_with_name: 'Olá do Loopback, %s',
+          greeting_with_name: 'Olá do Loopback, {{name}}',
         },
       },
     } as I18nOptions);
