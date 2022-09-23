@@ -7,7 +7,7 @@ import {
   Client,
   givenHttpServerConfig,
 } from '@loopback/testlab';
-import { I18NBindings, I18nOptions } from '../../keys';
+import { I18nBindings, I18nOptions } from '../../keys';
 import { TestController } from '../fixtures/controller';
 
 describe('i18n component', () => {
@@ -21,7 +21,7 @@ describe('i18n component', () => {
       rest: restConfig,
     });
 
-    app.configure(I18NBindings.COMPONENT).to({
+    app.configure(I18nBindings.COMPONENT).to({
       defaultLocale: 'en',
       locales: ['en', 'pt'],
       staticCatalog: {

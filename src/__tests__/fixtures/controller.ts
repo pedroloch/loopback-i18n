@@ -1,10 +1,10 @@
 import { inject } from '@loopback/core';
 import { get, param } from '@loopback/rest';
-import { I18NBindings, I18nApi } from '../../';
+import { I18nBindings, I18nApi } from '../../';
 
 export class TestController {
   constructor(
-    @inject(I18NBindings.T)
+    @inject(I18nBindings.T)
     public t: I18nApi
   ) {}
 
