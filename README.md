@@ -1,4 +1,4 @@
-# I18N for Loopback 4
+# I18n for Loopback 4
 
 This module contains a component to add i18n to Loopback 4. It's made on top of the library [i18n](https://www.npmjs.com/package/i18n) for node.
 
@@ -13,16 +13,12 @@ npm install @pedroloch/loopback-i18n
 The component should be loaded with it's configuration in the constructor of you Application Class. This example assumes you have a folder called locales in your root folder.
 
 ```ts
-
-
 import {BootMixin} from '@loopback/boot';
 import {RepositoryMixin} from '@loopback/repository';
+import {ServiceMixin} from '@loopback/service-proxy';
 import {RestApplication, RestBindings} from '@loopback/rest';
-import {readFileSync} from 'fs';
-import path from 'path';
-import yaml from 'yaml';
 import {I18NBindings, I18nComponent, I18nOptions} from '@pedroloch/loopback-i18n';
-export {ApplicationConfig};
+import path from 'path';
 
 export class BackendApplication extends BootMixin(ServiceMixin(RepositoryMixin(RestApplication))) {
   constructor(options: ApplicationConfig = {}) {
