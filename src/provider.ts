@@ -17,11 +17,6 @@ export class IntlProvider implements Provider<I18nApi> {
   ) {}
 
   value(): I18nApi {
-    return (msg, replacements) => {
-      if (Array.isArray(replacements) || typeof replacements === 'string')
-        return this.req.__(msg, ...replacements);
-
-      return this.req.__(msg, replacements);
-    };
+    return this.req.__;
   }
 }
