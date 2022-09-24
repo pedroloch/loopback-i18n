@@ -15,7 +15,6 @@
   },
   "scripts": {
     "build": "lb-tsc",
-    "clean": "lb-clean loopback-apiconnect*.tgz dist *.tsbuildinfo package",
     "pretest": "npm run build",
     "test": "lb-mocha --allow-console-logs \"dist/__tests__\""
   },
