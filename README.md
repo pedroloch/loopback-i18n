@@ -17,7 +17,7 @@ import {BootMixin} from '@loopback/boot';
 import {RepositoryMixin} from '@loopback/repository';
 import {ServiceMixin} from '@loopback/service-proxy';
 import {RestApplication, RestBindings} from '@loopback/rest';
-import {I18NBindings, I18nComponent, I18nOptions} from '@pedroloch/loopback-i18n';
+import {I18nBindings, I18nComponent, I18nOptions} from '@pedroloch/loopback-i18n';
 import path from 'path';
 
 export class BackendApplication extends BootMixin(ServiceMixin(RepositoryMixin(RestApplication))) {
@@ -27,7 +27,7 @@ export class BackendApplication extends BootMixin(ServiceMixin(RepositoryMixin(R
     //...Your application bindings declarations
 
     // Should load the configuration first
-    this.configure(I18NBindings.COMPONENT).to({
+    this.configure(I18nBindings.COMPONENT).to({
       defaultLocale: 'en',
       locales: ['en', 'pt'],
       directory: path.join(__dirname, '../locales')
@@ -75,11 +75,11 @@ Now you can inject a function that will translate the messages based on the brow
 ```ts
 import { inject } from '@loopback/core';
 import { get, param } from '@loopback/rest';
-import { I18NBindings, I18nApi } from '@pedroloch/loopback-i18n';
+import { I18nBindings, I18nApi } from '@pedroloch/loopback-i18n';
 
 export class MyController {
   constructor(
-    @inject(I18NBindings.T)
+    @inject(I18nBindings.T)
     public t: I18nApi
   ) {}
 
