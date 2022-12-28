@@ -17,6 +17,11 @@ export class IntlProvider implements Provider<I18nApi> {
   ) {}
 
   value(): I18nApi {
+    if (!this.req) {
+      return ((msg: string | i18n.TranslateOptions, ...replace: string[]) =>
+        msg) as I18nApi;
+    }
+
     return this.req.__;
   }
 }
